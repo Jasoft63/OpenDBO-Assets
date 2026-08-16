@@ -58756,6 +58756,15 @@ surface "srfHintPulse"
 		surface_focus 	= "srfBlueBtnFocus";
 		surface_disable = "srfBlueBtnDown";
 	}
+
+	flash flsResult
+	{
+		x		= 240;
+		y		= 50;
+		width		= 182;
+		height		= 430;
+		enabled		= false;
+	}
 }resource "rsrHLS1"
 {
 	handle	= 0;
@@ -58820,7 +58829,38 @@ resource "rsrCashPayment3"
 {
     handle  = 0;
     file    = "wnd_cash_payment_03.png";
-}surface "srfDlgBackLeftTop"
+}
+
+resource "rsrWaguMachineItem2"
+{
+	handle	= 0;
+	file	= "wnd_HLS2.png";
+}
+
+resource "rsrWaguMachineItem3"
+{
+	handle	= 0;
+	file	= "wnd_HLS3.png";
+}
+
+resource "rsrWaguMachine2"
+{
+	handle	= 0;
+	file	= "wnd_HLS2.png";
+}
+
+resource "rsrWaguMachine7"
+{
+	handle	= 0;
+	file	= "wnd_HLS7.png";
+}
+
+resource "rsrWaguMachine3"
+{
+	handle	= 0;
+	file	= "wnd_HLS3.png";
+}
+surface "srfDlgBackLeftTop"
 {
 	resource_file	= "HLS.rsr";
 	resource_name	= "rsrHLS1";
@@ -60306,7 +60346,748 @@ surface "srfScrollLayout"
 
 	handle		= 12;
 	blend		= 34;
-}dialog dlgMain
+}
+
+surface "srfWaguBack"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachineItem2";
+
+	x		= 0;
+	y		= 0;
+	width		= 229;
+	height		= 224;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 69;
+	uv_top		= 0;
+	uv_right	= 298;
+	uv_bottom	= 224;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBunchBtnUp"
+{
+	resource_file	= "HLS.rsr";
+	resource_name	= "rsrWaguMachineItem3";
+
+	x		    = 0;
+	y		    = 0;
+	width		= 29;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 106;
+	uv_top		= 471;
+	uv_right	= 135;
+	uv_bottom	= 492;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBunchBtnFocus"
+{
+	resource_file	= "HLS.rsr";
+	resource_name	= "rsrWaguMachineItem3";
+
+	x		= 0;
+	y		= 0;
+	width		= 29;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 136;
+	uv_top		= 471;
+	uv_right	= 165;
+	uv_bottom	= 492;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBunchBtnDown"
+{
+	resource_file	= "HLS.rsr";
+	resource_name	= "rsrWaguMachineItem3";
+
+	x		= 0;
+	y		= 0;
+	width		= 29;
+	height		= 21;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 166;
+	uv_top		= 471;
+	uv_right	= 195;
+	uv_bottom	= 492;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWaguMachineBtnUp"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachineItem3";
+
+	x		= 0;
+	y		= 0;
+	width		= 67;
+	height		= 22;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 430;
+	uv_top		= 282;
+	uv_right	= 497;
+	uv_bottom	= 304;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWaguMachineBtnFoc"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachineItem3";
+
+	x		= 0;
+	y		= 0;
+	width		= 67;
+	height		= 22;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 430;
+	uv_top		= 305;
+	uv_right	= 497;
+	uv_bottom	= 327;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfWaguMachineBtnDown"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachineItem3";
+
+	x		= 0;
+	y		= 0;
+	width		= 67;
+	height		= 22;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 430;
+	uv_top		= 328;
+	uv_right	= 497;
+	uv_bottom	= 350;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfEventMark"
+{
+	resource_file	= "HLS.rsr";
+	resource_name	= "rsrWaguMachineItem3";
+
+	x		= 0;
+	y		= 0;
+	width		= 88;
+	height		= 59;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 193;
+	uv_top		= 452;
+	uv_right	= 281;
+	uv_bottom	= 511;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBuleMachine_1"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine2";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 69;
+	uv_top		= 225;
+	uv_right	= 159;
+	uv_bottom	= 375;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBuleMachine_2"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine2";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 160;
+	uv_top		= 225;
+	uv_right	= 250;
+	uv_bottom	= 375;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBuleMachine_3"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine2";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 251;
+	uv_top		= 225;
+	uv_right	= 341;
+	uv_bottom	= 375;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBuleMachine_4"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine2";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 342;
+	uv_top		= 225;
+	uv_right	= 432;
+	uv_bottom	= 375;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfYellowMachine_1"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 0;
+	uv_top		= 0;
+	uv_right	= 90;
+	uv_bottom	= 150;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfYellowMachine_2"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 91;
+	uv_top		= 0;
+	uv_right	= 181;
+	uv_bottom	= 150;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfYellowMachine_3"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 182;
+	uv_top		= 0;
+	uv_right	= 272;
+	uv_bottom	= 150;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfYellowMachine_4"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 273;
+	uv_top		= 0;
+	uv_right	= 363;
+	uv_bottom	= 150;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRedMachine_1"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 0;
+	uv_top		= 151;
+	uv_right	= 90;
+	uv_bottom	= 301;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRedMachine_2"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 91;
+	uv_top		= 151;
+	uv_right	= 181;
+	uv_bottom	= 301;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRedMachine_3"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 182;
+	uv_top		= 151;
+	uv_right	= 272;
+	uv_bottom	= 301;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfRedMachine_4"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 273;
+	uv_top		= 151;
+	uv_right	= 363;
+	uv_bottom	= 301;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGreenMachine_1"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 0;
+	uv_top		= 302;
+	uv_right	= 90;
+	uv_bottom	= 452;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGreenMachine_2"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 91;
+	uv_top		= 302;
+	uv_right	= 181;
+	uv_bottom	= 452;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGreenMachine_3"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 182;
+	uv_top		= 302;
+	uv_right	= 272;
+	uv_bottom	= 452;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfGreenMachine_4"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine7";
+
+	x		= 0;
+	y		= 0;
+	width		= 90;
+	height		= 150;
+	
+	color_red	= 255;
+	color_green 	= 255;
+	color_blue	= 255;
+	color_alpha 	= 255;
+
+	uv_left		= 273;
+	uv_top		= 302;
+	uv_right	= 363;
+	uv_bottom	= 452;
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBlueMachineProgress"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine3";
+
+	x		        = 0;
+	y		        = 0;
+	width		    = 69;
+	height		    = 5;
+	
+	color_red	    = 255;
+	color_green     = 255;
+	color_blue  	= 255;
+	color_alpha     = 255;
+
+	uv_left		    = 390;
+	uv_top		    = 372;
+	uv_right	    = 459;
+	uv_bottom   	= 377;
+	handle		    = 0;
+	blend	    	= 0;
+}
+
+surface "srfYellowMachineProgress"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine3";
+
+	x		        = 0;
+	y		        = 0;
+	width		    = 69;
+	height		    = 5;
+	
+	color_red	    = 255;
+	color_green     = 255;
+	color_blue  	= 255;
+	color_alpha     = 255;
+
+	uv_left		    = 407;
+	uv_top		    = 390;
+	uv_right	    = 476;
+	uv_bottom   	= 395;
+	handle		    = 0;
+	blend	    	= 0;
+}
+
+surface "srfRedMachineProgress"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine3";
+
+	x		        = 0;
+	y		        = 0;
+	width		    = 69;
+	height		    = 5;
+	
+	color_red	    = 255;
+	color_green     = 255;
+	color_blue  	= 255;
+	color_alpha     = 255;
+
+	uv_left		    = 407;
+	uv_top		    = 384;
+	uv_right	    = 476;
+	uv_bottom   	= 389;
+	handle		    = 0;
+	blend	    	= 0;
+}
+
+surface "srfGreenMachineProgress"
+{
+	resource_file   = "HLS.rsr";
+	resource_name	= "rsrWaguMachine3";
+
+	x		        = 0;
+	y		        = 0;
+	width		    = 69;
+	height		    = 5;
+	
+	color_red	    = 255;
+	color_green     = 255;
+	color_blue  	= 255;
+	color_alpha     = 255;
+
+	uv_left		    = 407;
+	uv_top		    = 378;
+	uv_right	    = 476;
+	uv_bottom   	= 383;
+	handle		    = 0;
+	blend	    	= 0;
+}
+
+surface "srfBlueSmallBtnUp"
+{
+	resource_file	= "HLS.rsr";
+	resource_name	= "rsrHLS3";
+
+	x		= 0;
+	y		= 0;
+	width		= 67;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= -1;
+	uv_top		= 406;
+	uv_right	= 106;
+	uv_bottom	= 438;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBlueSmallBtnFocus"
+{
+	resource_file	= "HLS.rsr";
+	resource_name	= "rsrHLS3";
+
+	x		= 0;
+	y		= 0;
+	width		= 67;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= -1;
+	uv_top		= 437;
+	uv_right	= 106;
+	uv_bottom	= 469;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfBlueSmallBtnDown"
+{
+	resource_file	= "HLS.rsr";
+	resource_name	= "rsrHLS3";
+
+	x		= 0;
+	y		= 0;
+	width		= 67;
+	height		= 22;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= -1;
+	uv_top		= 468;
+	uv_right	= 106;
+	uv_bottom	= 501;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+dialog dlgMain
 {
 	x	= 0;
  	y 	= 0;
@@ -85069,6 +85850,12 @@ resource "rsrCommon_1"
 	handle	= 0;
 	file	= "common_1.png";
 }
+
+resource "rsrDlgBK"
+{
+	handle	= 0;
+	file	= "wnd_HLS3.png";
+}
 surface "srfMsgBackUp"
 {
 	resource_file	= "MsgBox.rsr";
@@ -85253,6 +86040,30 @@ surface "srfBlackPanel"
 	uv_top		= 0;
 	uv_right	= 0;
 	uv_bottom	= 0;
+
+	handle		= 0;
+	blend		= 0;
+}
+
+surface "srfSlotItem"
+{
+	resource_file	= "MsgBox.rsr";
+	resource_name	= "rsrDlgBK";
+
+	x		= 0;
+	y		= 0;
+	width		= 36;
+	height		= 36;
+
+	color_red	= 255;
+	color_green	= 255;
+	color_blue	= 255;
+	color_alpha	= 255;
+
+	uv_left		= 353;
+	uv_top		= 370;
+	uv_right	= 389;
+	uv_bottom	= 406;
 
 	handle		= 0;
 	blend		= 0;
